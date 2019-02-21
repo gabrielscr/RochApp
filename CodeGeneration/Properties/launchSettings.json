@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CodeGeneration": {
+      "commandName": "Project",
+      "commandLineArgs": "ts"
+    }
+  }
+}
