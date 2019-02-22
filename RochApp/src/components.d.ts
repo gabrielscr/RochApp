@@ -8,8 +8,8 @@
 import '@stencil/core';
 
 import '@ionic/core';
-import '@tempusdigital/ionic';
 import 'ionicons';
+import '@tempusdigital/ionic';
 import {
   ISelectColorOption,
 } from './common/components/t-select-color/t-select-color-interface';
