@@ -1,0 +1,19 @@
+my-app {
+  .menu-item
+
+{
+}
+
+.menu-item .active {
+  color: blue;
+}
+
+.menu-item:hover {
+  background-color: #eee;
+}
+
+}
+
+ion-item > a ion-button {
+  z-index: 2;
+}

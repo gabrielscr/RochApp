@@ -8,49 +8,165 @@
 import '@stencil/core';
 
 import '@ionic/core';
+import '@tempusdigital/ionic';
 import 'ionicons';
+import {
+  ISelectColorOption,
+} from './common/components/t-select-color/t-select-color-interface';
+import {
+  ISelectImgOption,
+} from './common/components/t-select-img/t-select-img-interface';
 
 
 export namespace Components {
 
-  interface AppHome {}
-  interface AppHomeAttributes extends StencilHTMLAttributes {}
-
-  interface AppProfile {
-    'name': string;
+  interface TSelectColorModal {
+    'handleChange': (selectedOption: ISelectColorOption) => void;
+    'modalName': string;
+    'modalObservation': string;
+    'modalTitle': string;
+    'options': ISelectColorOption[];
+    'value': string | string[];
   }
-  interface AppProfileAttributes extends StencilHTMLAttributes {
+  interface TSelectColorModalAttributes extends StencilHTMLAttributes {
+    'handleChange'?: (selectedOption: ISelectColorOption) => void;
+    'modalName'?: string;
+    'modalObservation'?: string;
+    'modalTitle'?: string;
+    'options'?: ISelectColorOption[];
+    'value'?: string | string[];
+  }
+
+  interface TSelectColor {
+    'disabled': boolean;
+    'modalName': string;
+    'modalObservation': string;
+    'modalTitle': string;
+    'name': string;
+    'options': ISelectColorOption[];
+    'readonly': boolean;
+    'required': boolean;
+    'value': string;
+  }
+  interface TSelectColorAttributes extends StencilHTMLAttributes {
+    'disabled'?: boolean;
+    'modalName'?: string;
+    'modalObservation'?: string;
+    'modalTitle'?: string;
     'name'?: string;
+    'onChange'?: (event: CustomEvent) => void;
+    'onIonStyle'?: (event: CustomEvent) => void;
+    'options'?: ISelectColorOption[];
+    'readonly'?: boolean;
+    'required'?: boolean;
+    'value'?: string;
+  }
+
+  interface TSelectImgModal {
+    'handleChange': (selectedOption: ISelectImgOption) => void;
+    'modalName': string;
+    'modalObservation': string;
+    'modalTitle': string;
+    'options': ISelectImgOption[];
+    'value': string | string[];
+  }
+  interface TSelectImgModalAttributes extends StencilHTMLAttributes {
+    'handleChange'?: (selectedOption: ISelectImgOption) => void;
+    'modalName'?: string;
+    'modalObservation'?: string;
+    'modalTitle'?: string;
+    'options'?: ISelectImgOption[];
+    'value'?: string | string[];
+  }
+
+  interface TSelectImg {
+    'disabled': boolean;
+    'modalName': string;
+    'modalObservation': string;
+    'modalTitle': string;
+    'name': string;
+    'options': ISelectImgOption[];
+    'readonly': boolean;
+    'required': boolean;
+    'value': string;
+  }
+  interface TSelectImgAttributes extends StencilHTMLAttributes {
+    'disabled'?: boolean;
+    'modalName'?: string;
+    'modalObservation'?: string;
+    'modalTitle'?: string;
+    'name'?: string;
+    'onChange'?: (event: CustomEvent) => void;
+    'onIonStyle'?: (event: CustomEvent) => void;
+    'options'?: ISelectImgOption[];
+    'readonly'?: boolean;
+    'required'?: boolean;
+    'value'?: string;
   }
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface MenuPage {}
+  interface MenuPageAttributes extends StencilHTMLAttributes {}
+
+  interface ProductInsertEdit {
+    'productId': number;
+  }
+  interface ProductInsertEditAttributes extends StencilHTMLAttributes {
+    'productId'?: number;
+  }
+
+  interface ProductList {}
+  interface ProductListAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
+    'TSelectColorModal': Components.TSelectColorModal;
+    'TSelectColor': Components.TSelectColor;
+    'TSelectImgModal': Components.TSelectImgModal;
+    'TSelectImg': Components.TSelectImg;
     'AppRoot': Components.AppRoot;
+    'MenuPage': Components.MenuPage;
+    'ProductInsertEdit': Components.ProductInsertEdit;
+    'ProductList': Components.ProductList;
   }
 
   interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
+    't-select-color-modal': Components.TSelectColorModalAttributes;
+    't-select-color': Components.TSelectColorAttributes;
+    't-select-img-modal': Components.TSelectImgModalAttributes;
+    't-select-img': Components.TSelectImgAttributes;
     'app-root': Components.AppRootAttributes;
+    'menu-page': Components.MenuPageAttributes;
+    'product-insert-edit': Components.ProductInsertEditAttributes;
+    'product-list': Components.ProductListAttributes;
   }
 
 
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  interface HTMLTSelectColorModalElement extends Components.TSelectColorModal, HTMLStencilElement {}
+  var HTMLTSelectColorModalElement: {
+    prototype: HTMLTSelectColorModalElement;
+    new (): HTMLTSelectColorModalElement;
   };
 
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  interface HTMLTSelectColorElement extends Components.TSelectColor, HTMLStencilElement {}
+  var HTMLTSelectColorElement: {
+    prototype: HTMLTSelectColorElement;
+    new (): HTMLTSelectColorElement;
+  };
+
+  interface HTMLTSelectImgModalElement extends Components.TSelectImgModal, HTMLStencilElement {}
+  var HTMLTSelectImgModalElement: {
+    prototype: HTMLTSelectImgModalElement;
+    new (): HTMLTSelectImgModalElement;
+  };
+
+  interface HTMLTSelectImgElement extends Components.TSelectImg, HTMLStencilElement {}
+  var HTMLTSelectImgElement: {
+    prototype: HTMLTSelectImgElement;
+    new (): HTMLTSelectImgElement;
   };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
@@ -59,16 +175,44 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLMenuPageElement extends Components.MenuPage, HTMLStencilElement {}
+  var HTMLMenuPageElement: {
+    prototype: HTMLMenuPageElement;
+    new (): HTMLMenuPageElement;
+  };
+
+  interface HTMLProductInsertEditElement extends Components.ProductInsertEdit, HTMLStencilElement {}
+  var HTMLProductInsertEditElement: {
+    prototype: HTMLProductInsertEditElement;
+    new (): HTMLProductInsertEditElement;
+  };
+
+  interface HTMLProductListElement extends Components.ProductList, HTMLStencilElement {}
+  var HTMLProductListElement: {
+    prototype: HTMLProductListElement;
+    new (): HTMLProductListElement;
+  };
+
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
+    't-select-color-modal': HTMLTSelectColorModalElement
+    't-select-color': HTMLTSelectColorElement
+    't-select-img-modal': HTMLTSelectImgModalElement
+    't-select-img': HTMLTSelectImgElement
     'app-root': HTMLAppRootElement
+    'menu-page': HTMLMenuPageElement
+    'product-insert-edit': HTMLProductInsertEditElement
+    'product-list': HTMLProductListElement
   }
 
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
+    't-select-color-modal': HTMLTSelectColorModalElement;
+    't-select-color': HTMLTSelectColorElement;
+    't-select-img-modal': HTMLTSelectImgModalElement;
+    't-select-img': HTMLTSelectImgElement;
     'app-root': HTMLAppRootElement;
+    'menu-page': HTMLMenuPageElement;
+    'product-insert-edit': HTMLProductInsertEditElement;
+    'product-list': HTMLProductListElement;
   }
 
 

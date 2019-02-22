@@ -7,13 +7,13 @@
 //     quando o código for gerado novamente.
 // </auto-generated>
 //------------------------------------------------------------------------------
-module Api.Produto.Delete {
+module Api.Product.Delete {
     export interface Command {
         id: number;
     }
 }
 
-module Api.Produto.InsertEdit {
+module Api.Product.InsertEdit {
     export interface Command {
         id?: number;
         descricao?: string;
@@ -25,7 +25,7 @@ module Api.Produto.InsertEdit {
     }
 }
 
-module Api.Produto.List {
+module Api.Product.List {
     export interface Dto {
         products?: ProductDto[];
     }

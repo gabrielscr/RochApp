@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="src\env\" />
+    <Folder Include="src\common\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

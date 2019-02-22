@@ -15,7 +15,7 @@
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Produto>();
+            modelBuilder.Entity<Product>();
         }
     }
 }

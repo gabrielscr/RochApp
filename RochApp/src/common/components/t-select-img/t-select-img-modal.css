@@ -1,0 +1,30 @@
+t-select-img-modal ion-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+t-select-img-modal .img {
+  height: 160px;
+  width: 100%;
+  object-fit: none;
+}
+
+t-select-img-modal .img-title {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+t-select-img-modal ion-col {
+  padding: 14px;
+}
+
+t-select-img-modal ion-card {
+  cursor: pointer;
+  height: 100%;
+  color: white;
+  padding-left: 0px !important;
+  margin: 0 !important;
+  height: 100%;
+}

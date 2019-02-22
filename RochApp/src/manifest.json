@@ -1,6 +1,6 @@
 {
-  "name": "rochapp",
-  "short_name": "rochapp",
+  "name": "rapp",
+  "short_name": "rapp",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
